@@ -1,14 +1,16 @@
-import { Switch } from "./components/Switch";
+import { Hero } from "@pages/Hero"
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
 
 function App() {
-	return (
-		<>
-			<div className=" m-auto w-3/6 p-10 text-center">
-				<h1 className="text-3xl font-bold">React+shadcn+vite</h1>
-				<Switch />
-			</div>
-		</>
-	);
+    return (
+        <>
+            <Router>
+                <Routes>
+                    <Route path="/" element={<Hero />}></Route>
+                </Routes>
+            </Router>
+        </>
+    )
 }
 
-export default App;
+export default App
